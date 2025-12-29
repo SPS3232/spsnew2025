@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.seacoastpriorityservices.com/sitemap.xml
