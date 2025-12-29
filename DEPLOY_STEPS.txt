@@ -1,0 +1,15 @@
+﻿Manual Update Steps (No Webhook)
+
+On your computer:
+1) Open a terminal
+2) Run:
+   cd f:\devvapp\SPSwebsite
+   git add .
+   git commit -m "Update site"
+   git push
+
+On your VPS:
+1) SSH in
+2) Run:
+   cd /home/seacoastpriorityservices.com/public_html
+   git pull
