@@ -383,6 +383,13 @@ img {
 .stars {
   width: 110px;
   height: 20px;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.review-card svg {
+  max-width: 110px;
+  height: 20px;
 }
 
 @keyframes marquee {
