@@ -41,12 +41,20 @@ const fileInput = document.querySelector('input[type="file"][name="files"]');
 
 if (fileInput) {
   const maxBytes = 1073741824;
+  const maxFiles = 10;
 
   fileInput.addEventListener('change', () => {
-    const totalBytes = Array.from(fileInput.files || []).reduce(
+    const files = Array.from(fileInput.files || []);
+    const totalBytes = files.reduce(
       (sum, file) => sum + file.size,
       0
     );
+
+    if (files.length > maxFiles) {
+      alert('Please select up to 10 files.');
+      fileInput.value = '';
+      return;
+    }
 
     if (totalBytes > maxBytes) {
       alert('Please keep uploads under 1 GB total.');
@@ -91,4 +99,12 @@ if (mapTarget && window.L) {
   }).addTo(map);
 
   L.marker(seabrook).addTo(map).bindPopup('Seabrook, NH');
+}
+
+const reviewsTrack = document.querySelector('.reviews-track');
+
+if (reviewsTrack && !reviewsTrack.dataset.cloned) {
+  const items = Array.from(reviewsTrack.children);
+  items.forEach((item) => reviewsTrack.appendChild(item.cloneNode(true)));
+  reviewsTrack.dataset.cloned = 'true';
 }
