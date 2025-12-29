@@ -1,0 +1,366 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seacoast Priority Services | Landscaping, Handyman, Snow Plowing, Junk Removal</title>
+  <meta name="description" content="Seacoast Priority Services provides professional lawn care, handyman services, snow plowing, and junk removal in Seabrook, New Hampshire and within a 25 mile radius.">
+  <meta name="keywords" content="Seacoast Priority Services, Seabrook NH landscaping, lawn care, handyman services, snow plowing, junk removal, Seabrook New Hampshire">
+  <meta name="author" content="Seacoast Priority Services">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://www.seacoastpriorityservices.com/">
+
+  <meta property="og:title" content="Seacoast Priority Services">
+  <meta property="og:description" content="Professional lawn care, handyman services, snow plowing, and junk removal in Seabrook, NH and surrounding areas.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.seacoastpriorityservices.com/">
+  <meta property="og:image" content="https://www.seacoastpriorityservices.com/assets/logo.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Seacoast Priority Services">
+  <meta name="twitter:description" content="Professional lawn care, handyman services, snow plowing, and junk removal in Seabrook, NH and surrounding areas.">
+  <meta name="twitter:image" content="https://www.seacoastpriorityservices.com/assets/logo.png">
+
+  <link rel="icon" href="assets/logo.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/logo.png" type="image/png" sizes="16x16">
+  <link rel="shortcut icon" href="assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/logo.png" sizes="180x180">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="#top" aria-label="Seacoast Priority Services">
+        <img src="assets/logo.png" alt="Seacoast Priority Services logo" class="logo">
+        <div class="brand-text">
+          <span>Seacoast</span>
+          <span>Priority Services</span>
+        </div>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="nav-bar"></span>
+        <span class="nav-bar"></span>
+        <span class="nav-bar"></span>
+      </button>
+      <nav class="site-nav" id="primary-nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#about">Why Us</a>
+        <a href="#area">Service Area</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a class="phone" href="tel:6032393286">603-239-3286</a>
+        <a class="btn primary" href="#contact">Get a Free Estimate</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Seabrook, New Hampshire + 25 mile radius</p>
+          <h1>Precision care for every season, every property.</h1>
+          <p class="lead">Seacoast Priority Services keeps your home and business looking sharp all year with lawn care, handyman help, snow plowing, and junk removal.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#contact">Request Your Quote</a>
+            <a class="btn ghost" href="#services">View Services</a>
+          </div>
+          <div class="hero-highlights">
+            <div>
+              <span class="stat">30+</span>
+              <span class="label">Years of field experience</span>
+            </div>
+            <div>
+              <span class="stat">24/7</span>
+              <span class="label">Seasonal response readiness</span>
+            </div>
+            <div>
+              <span class="stat">5.0</span>
+              <span class="label">Client-first reputation</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <h2>Everything your property needs</h2>
+            <ul>
+              <li>Lawn care and maintenance</li>
+              <li>Handyman and light repairs</li>
+              <li>Snow plowing and ice control</li>
+              <li>Junk removal and hauling</li>
+            </ul>
+            <div class="hero-contact">
+              <a href="tel:6032393286">Call 603-239-3286</a>
+              <a href="mailto:support@seacoastpriorityservices.com">support@seacoastpriorityservices.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Professional services that keep you ahead</h2>
+          <p>Customized plans, responsive scheduling, and premium results from a trusted local crew.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <h3>Lawn Care</h3>
+            <p>Weekly or seasonal mowing, edging, trimming, and cleanups that keep curb appeal strong.</p>
+            <a class="service-link" href="lawn-care/">Learn more</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>Handyman Services</h3>
+            <p>Repairs, upgrades, and fixes handled with attention to detail so your property stays safe.</p>
+            <a class="service-link" href="handyman/">Learn more</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>Snow Plowing</h3>
+            <p>Reliable winter response for driveways and lots with proactive ice management.</p>
+            <a class="service-link" href="snow-plowing/">Learn more</a>
+          </article>
+          <article class="service-card reveal">
+            <h3>Junk Removal</h3>
+            <p>Fast hauling and cleanup for garages, basements, yards, and construction debris.</p>
+            <a class="service-link" href="junk-removal/">Learn more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <h2>Why Seacoast Priority Services</h2>
+          <p>We blend craftsmanship, clear communication, and a premium service mindset to protect your investment. From routine maintenance to emergency response, our team brings the equipment and experience to do it right the first time.</p>
+          <div class="pillars">
+            <div>
+              <h3>Local and dependable</h3>
+              <p>Built for the Seabrook climate and the coastal demands of New Hampshire.</p>
+            </div>
+            <div>
+              <h3>Season-ready planning</h3>
+              <p>We map your services in advance so your property never falls behind.</p>
+            </div>
+            <div>
+              <h3>One team, many solutions</h3>
+              <p>Save time by keeping your lawn, repairs, and cleanup under one trusted partner.</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-panel reveal">
+          <div class="panel-inner">
+            <h3>Fast response. Clean execution.</h3>
+            <ul>
+              <li>Licensed and insured</li>
+              <li>Clear estimates and timelines</li>
+              <li>Property-focused service plans</li>
+              <li>Respectful, tidy crews</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="area" class="area section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <h2>Service area</h2>
+          <p>Based in Seabrook, NH and serving properties within a 25 mile radius including the greater Seacoast region.</p>
+        </div>
+        <div class="area-card reveal">
+          <div class="area-map">
+            <div id="service-map" role="img" aria-label="Map showing Seabrook, New Hampshire with a 25 mile service radius."></div>
+          </div>
+          <div class="area-details">
+            <h3>On-site and ready to roll</h3>
+            <p>We respond quickly across coastal communities with the equipment and manpower to keep your home or business in top shape.</p>
+            <div class="area-list">
+              <span>Hampton</span>
+              <span>Salisbury</span>
+              <span>Portsmouth</span>
+              <span>Exeter</span>
+              <span>Newburyport</span>
+              <span>And more nearby towns</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta section">
+      <div class="container cta-grid reveal">
+        <div>
+          <h2>Schedule service with a team that treats your property like their own.</h2>
+          <p>Get a fast, friendly quote and a plan that matches your season, schedule, and budget.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn primary" href="tel:6032393286">Call 603-239-3286</a>
+          <a class="btn ghost" href="mailto:support@seacoastpriorityservices.com">Email Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <h2>Request a free estimate</h2>
+          <p>Tell us about your property and the services you need. We will respond quickly with availability and pricing.</p>
+          <div class="contact-details">
+            <div>
+              <span>Phone</span>
+              <a href="tel:6032393286">603-239-3286</a>
+            </div>
+            <div>
+              <span>Email</span>
+              <a href="mailto:support@seacoastpriorityservices.com">support@seacoastpriorityservices.com</a>
+            </div>
+            <div>
+              <span>Service area</span>
+              <p>Seabrook, NH and a 25 mile radius</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form reveal" action="https://formsubmit.co/webleads@seacoastpriorityservices.com" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="New lead from website">
+          <label>
+            Full name
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required>
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" placeholder="(603) 000-0000">
+          </label>
+          <label>
+            Project address
+            <input type="text" name="address" placeholder="Street, City, State, ZIP" required>
+          </label>
+          <label>
+            Services needed
+            <input type="text" name="services" placeholder="Lawn care, snow plowing, junk removal">
+          </label>
+          <label>
+            How did you find us?
+            <select name="referral" id="referral-source" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Google Search">Google search engine</option>
+              <option value="Bing Search">Bing search engine</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label class="other-referral" id="other-referral">
+            If other, please specify
+            <input type="text" name="referral_other" placeholder="Tell us where you found us">
+          </label>
+          <label>
+            Upload photos or video (up to 1 GB total)
+            <input type="file" name="files" accept="image/*,video/*" multiple>
+          </label>
+          <label>
+            Details
+            <textarea name="details" rows="4" placeholder="Tell us about the property and timing"></textarea>
+          </label>
+          <button class="btn primary" type="submit">Send Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="assets/logo.png" alt="Seacoast Priority Services logo" class="logo footer-logo">
+        <p>Premium property care for Seabrook, New Hampshire and the surrounding Seacoast region.</p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="lawn-care/">Lawn Care</a></li>
+          <li><a href="handyman/">Handyman Services</a></li>
+          <li><a href="snow-plowing/">Snow Plowing</a></li>
+          <li><a href="junk-removal/">Junk Removal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:6032393286">603-239-3286</a></li>
+          <li>Seabrook, NH</li>
+          <li><a href="mailto:support@seacoastpriorityservices.com">support@seacoastpriorityservices.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacy/">Privacy Policy</a></li>
+          <li><a href="terms/">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow us</h3>
+        <div class="social-links">
+          <a href="https://seacoast-priority-services.odoo.com/website/social/instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm10 2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm-5 3.2a3.8 3.8 0 1 1 0 7.6 3.8 3.8 0 0 1 0-7.6zm0 2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zm4.9-2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+          </a>
+          <a href="https://seacoast-priority-services.odoo.com/website/social/facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M13.5 9H16V6h-2.5c-2.2 0-3.5 1.3-3.5 3.6V12H7.5v3h2.5v6H13v-6h2.6l.4-3H13v-2c0-.7.3-1 1-1z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright 2025 Seacoast Priority Services. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Seacoast Priority Services",
+    "image": "https://www.seacoastpriorityservices.com/assets/logo.png",
+    "telephone": "603-239-3286",
+    "email": "support@seacoastpriorityservices.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Seabrook",
+      "addressRegion": "NH",
+      "addressCountry": "US"
+    },
+    "areaServed": "Seabrook, NH and within 25 miles",
+    "url": "https://www.seacoastpriorityservices.com/",
+    "sameAs": [],
+    "serviceType": [
+      "Lawn care",
+      "Handyman services",
+      "Snow plowing",
+      "Junk removal"
+    ]
+  }
+  </script>
+</body>
+</html>

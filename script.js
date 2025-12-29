@@ -1,0 +1,94 @@
+﻿const revealItems = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add('is-visible'));
+}
+
+const navToggle = document.querySelector('.nav-toggle');
+const primaryNav = document.getElementById('primary-nav');
+
+if (navToggle && primaryNav) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = document.body.classList.toggle('nav-open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  primaryNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (document.body.classList.contains('nav-open')) {
+        document.body.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+}
+
+const fileInput = document.querySelector('input[type="file"][name="files"]');
+
+if (fileInput) {
+  const maxBytes = 1073741824;
+
+  fileInput.addEventListener('change', () => {
+    const totalBytes = Array.from(fileInput.files || []).reduce(
+      (sum, file) => sum + file.size,
+      0
+    );
+
+    if (totalBytes > maxBytes) {
+      alert('Please keep uploads under 1 GB total.');
+      fileInput.value = '';
+    }
+  });
+}
+
+const referralSelect = document.getElementById('referral-source');
+const otherReferral = document.getElementById('other-referral');
+
+if (referralSelect && otherReferral) {
+  const otherInput = otherReferral.querySelector('input');
+
+  referralSelect.addEventListener('change', () => {
+    const isOther = referralSelect.value === 'Other';
+    otherReferral.classList.toggle('is-visible', isOther);
+    if (otherInput) {
+      otherInput.required = isOther;
+      if (!isOther) {
+        otherInput.value = '';
+      }
+    }
+  });
+}
+
+const mapTarget = document.getElementById('service-map');
+
+if (mapTarget && window.L) {
+  const seabrook = [42.8945, -70.8712];
+  const map = L.map(mapTarget, { scrollWheelZoom: false }).setView(seabrook, 10);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  L.circle(seabrook, {
+    radius: 40234,
+    color: '#0f5066',
+    fillColor: '#f4b340',
+    fillOpacity: 0.2
+  }).addTo(map);
+
+  L.marker(seabrook).addTo(map).bindPopup('Seabrook, NH');
+}
