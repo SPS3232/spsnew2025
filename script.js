@@ -37,47 +37,59 @@ if (navToggle && primaryNav) {
   });
 }
 
-const fileInput = document.querySelector('input[type="file"][name="files"]');
+const fileInputs = document.querySelectorAll('input[type="file"][name="files"]');
 
-if (fileInput) {
+if (fileInputs.length) {
   const maxBytes = 1073741824;
   const maxFiles = 10;
 
-  fileInput.addEventListener('change', () => {
-    const files = Array.from(fileInput.files || []);
-    const totalBytes = files.reduce(
-      (sum, file) => sum + file.size,
-      0
-    );
+  fileInputs.forEach((input) => {
+    input.addEventListener('change', () => {
+      const files = Array.from(input.files || []);
+      const totalBytes = files.reduce(
+        (sum, file) => sum + file.size,
+        0
+      );
 
-    if (files.length > maxFiles) {
-      alert('Please select up to 10 files.');
-      fileInput.value = '';
-      return;
-    }
+      if (files.length > maxFiles) {
+        alert('Please select up to 10 files.');
+        input.value = '';
+        return;
+      }
 
-    if (totalBytes > maxBytes) {
-      alert('Please keep uploads under 1 GB total.');
-      fileInput.value = '';
-    }
+      if (totalBytes > maxBytes) {
+        alert('Please keep uploads under 1 GB total.');
+        input.value = '';
+      }
+    });
   });
 }
 
-const referralSelect = document.getElementById('referral-source');
-const otherReferral = document.getElementById('other-referral');
+const referralSelects = document.querySelectorAll('select[name="referral"]');
 
-if (referralSelect && otherReferral) {
-  const otherInput = otherReferral.querySelector('input');
+if (referralSelects.length) {
+  referralSelects.forEach((select) => {
+    const form = select.closest('form');
+    const otherReferral = form ? form.querySelector('.other-referral') : null;
+    const otherInput = otherReferral ? otherReferral.querySelector('input') : null;
 
-  referralSelect.addEventListener('change', () => {
-    const isOther = referralSelect.value === 'Other';
-    otherReferral.classList.toggle('is-visible', isOther);
-    if (otherInput) {
-      otherInput.required = isOther;
-      if (!isOther) {
-        otherInput.value = '';
-      }
+    if (!otherReferral) {
+      return;
     }
+
+    const toggleOther = () => {
+      const isOther = select.value === 'Other';
+      otherReferral.classList.toggle('is-visible', isOther);
+      if (otherInput) {
+        otherInput.required = isOther;
+        if (!isOther) {
+          otherInput.value = '';
+        }
+      }
+    };
+
+    select.addEventListener('change', toggleOther);
+    toggleOther();
   });
 }
 
