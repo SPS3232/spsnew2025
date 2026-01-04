@@ -1057,4 +1057,31 @@ img {
   .service-illustration {
     order: 3;
   }
+
+  .mortgage-landing .hero-copy,
+  .mortgage-landing .hero-card,
+  .mortgage-landing .hero-highlights {
+    text-align: center;
+    justify-items: center;
+  }
+
+  .mortgage-landing .hero-actions,
+  .mortgage-landing .hero-highlights {
+    justify-content: center;
+  }
+
+  .mortgage-landing .hero-contact a {
+    text-align: center;
+  }
+
+  .mortgage-landing .hero-card ul,
+  .mortgage-landing .hero-card ul li {
+    text-align: center;
+  }
+
+  .mortgage-landing .hero-card ul {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+  }
 }
