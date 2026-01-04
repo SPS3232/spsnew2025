@@ -190,6 +190,42 @@ img {
   z-index: 0;
 }
 
+.mortgage-landing .hero-bg {
+  background: linear-gradient(120deg, rgba(11, 47, 61, 0.55), rgba(15, 80, 102, 0.35)),
+              url("assets/mortgage-hero.png") center/cover no-repeat;
+}
+
+.mortgage-landing .hero,
+.mortgage-landing .hero h1,
+.mortgage-landing .hero .lead,
+.mortgage-landing .hero .eyebrow,
+.mortgage-landing .hero .hero-highlights .stat,
+.mortgage-landing .hero .hero-highlights .label,
+.mortgage-landing .hero .hero-actions .btn.ghost {
+  color: var(--white);
+}
+
+.mortgage-landing .hero .hero-actions .btn.ghost {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.mortgage-landing .hero-card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.mortgage-landing .hero-card-inner,
+.mortgage-landing .hero-card h2,
+.mortgage-landing .hero-card ul,
+.mortgage-landing .hero-contact a {
+  color: var(--white);
+}
+
+.mortgage-landing .hero-card ul {
+  list-style: disc;
+}
+
 .hero-grid {
   position: relative;
   z-index: 1;
